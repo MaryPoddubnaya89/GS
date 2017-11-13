@@ -46,7 +46,6 @@ export class ProfilesPage {
                 this.repos = r;
 
                 this.profiles[i].repo = this.repos;
-                console.log(this.profiles);
               }
           )
         }

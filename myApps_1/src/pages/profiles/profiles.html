@@ -20,8 +20,8 @@
         <img src="{{profile.avatar_url}}"/>
       </ion-avatar>
       <h2><strong>{{profile.login}}</strong></h2>
-      <div *ngIf="profiles.repo">
-        <div *ngFor="let repo of profiles.repo">
+      <div *ngIf="profile.repo">
+        <div *ngFor="let repo of profile.repo">
           <h2>{{repo.name}}</h2>
           <p>{{repo.description}}</p>
           <div item-right>
@@ -30,9 +30,6 @@
         </div>
       </div>
 
-      <!--<div *ngIf="repos && repos.length === 0">
-        No repos
-      </div>-->
 
     </ion-item>
 
