@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar style="text-align: center; background: black">
+    <img src="https://image.flaticon.com/icons/png/512/23/23957.png"
+         style="display: inline-block; max-width: 20%; height: auto;">
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content style="padding-top: 30px;">
+
+  <ion-searchbar type="text" [(ngModel)]="github_user" name="github_user"
+                 (ionInput)="searchUsers($event)"></ion-searchbar>
+  <button ion-button small clear (click)="reset()">Clear</button>
+  <ion-list>
+
+    <ion-item *ngFor="let profile of profiles">
+
+      <ion-avatar item-left>
+        <img src="{{profile.avatar_url}}"/>
+      </ion-avatar>
+      <h2><strong>{{profile.login}}</strong></h2>
+      <div *ngIf="profiles.repo">
+        <div *ngFor="let repo of profiles.repo">
+          <h2>{{repo.name}}</h2>
+          <p>{{repo.description}}</p>
+          <div item-right>
+            <ion-badge>{{repo.stargazers_count}}</ion-badge>
+          </div>
+        </div>
+      </div>
+
+      <!--<div *ngIf="repos && repos.length === 0">
+        No repos
+      </div>-->
+
+    </ion-item>
+
+  </ion-list>
+</ion-content>
