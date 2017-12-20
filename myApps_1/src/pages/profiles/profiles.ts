@@ -20,8 +20,7 @@ export class ProfilesPage {
   }
 
   reset() {
-    this.profiles = "";
-    this.repos = "";
+    this.profiles = [];
     this.github_user = "";
     this.is_searching = false;
   }

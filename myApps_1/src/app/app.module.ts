@@ -2,10 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
 import { ProfilesPage } from '../pages/profiles/profiles';
-import { TabsPage } from '../pages/tabs/tabs';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GithubServiceProvider } from '../providers/github-service/github-service';
@@ -17,8 +14,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
 @NgModule({
   declarations: [
     MyApp,
-    ProfilesPage,
-    TabsPage
+    ProfilesPage
   ],
   imports: [
     BrowserModule,
@@ -29,8 +25,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ProfilesPage,
-    TabsPage
+    ProfilesPage
   ],
   providers: [
     StatusBar,

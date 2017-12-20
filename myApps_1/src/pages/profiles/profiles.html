@@ -7,7 +7,7 @@
 
 </ion-header>
 
-<ion-content style="padding-top: 30px;">
+<ion-content>
 
   <ion-searchbar type="text" [(ngModel)]="github_user" name="github_user"
                  (ionInput)="searchUsers($event)"></ion-searchbar>
@@ -16,21 +16,26 @@
 
     <ion-item *ngFor="let profile of profiles">
 
-      <ion-avatar item-left>
+      <ion-avatar item-left margin-right="30px">
         <img src="{{profile.avatar_url}}"/>
       </ion-avatar>
-      <h2><strong>{{profile.login}}</strong></h2>
+      <div>
+      <h2 class="profiles-heading"><strong>{{profile.login}}</strong></h2>
       <div *ngIf="profile.repo">
         <div *ngFor="let repo of profile.repo">
           <h2>{{repo.name}}</h2>
           <p>{{repo.description}}</p>
           <div item-right>
-            <ion-badge>{{repo.stargazers_count}}</ion-badge>
+            <ion-badge class="star-five"><span>{{repo.stargazers_count}}</span></ion-badge>
           </div>
         </div>
+
       </div>
 
-
+      </div>
+      <div *ngIf="repos && profile.repo === ''">
+        No repositories
+      </div>
     </ion-item>
 
   </ion-list>

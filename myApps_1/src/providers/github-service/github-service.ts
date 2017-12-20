@@ -4,7 +4,6 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class GithubServiceProvider {
-  profiles: any;
 
   constructor(private http: Http) {
     console.log('Hello GithubServiceProvider Provider');

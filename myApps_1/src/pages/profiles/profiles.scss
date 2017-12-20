@@ -4,8 +4,58 @@ page-profiles {
     background: grey;
     text-align: center;
   }
+
   .github-icon {
     width: 60%;
     height: auto;
   }
+
+  ion-content {
+    margin-top: 30px !important;
+  }
+
+
+  ion-item {
+      align-items: flex-start !important;
+  }
+
+  ion-avatar {
+    max-height: 70px !important;
+    max-width: 70px !important;
+
+    img {
+      width: 70px !important;
+      height: 70px !important;
+    }
+  }
+
+
+  h2.profiles-heading {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  ion-label.label {
+    white-space: inherit !important;
+  }
+
+
+  .star-five {
+    background-color: cornflowerblue;
+    text-align: center;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    clip-path: polygon(50% 0%, 63% 33%, 98% 35%, 78% 59%, 80% 89%, 51% 74%, 20% 90%, 23% 60%, 2% 35%, 35% 33%);
+
+    span {
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+  }
+
 }
