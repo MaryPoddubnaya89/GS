@@ -7,7 +7,6 @@ export class GithubServiceProvider {
 
   constructor(private http: Http) {
     console.log('Hello GithubServiceProvider Provider');
-
   }
 
   getUser(username) {
